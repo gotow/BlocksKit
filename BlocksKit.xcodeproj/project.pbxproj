@@ -1106,7 +1106,7 @@
 			};
 			buildConfigurationList = DB9B96121B3A52A700940D20 /* Build configuration list for PBXProject "BlocksKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1412,6 +1412,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				ENABLE_TESTABILITY = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--digest-algorithm=sha1,sha256";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1427,6 +1428,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				OTHER_CODE_SIGN_FLAGS = "--digest-algorithm=sha1,sha256";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1519,7 +1521,7 @@
 				INFOPLIST_FILE = BlocksKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "BlocksKit/Module-Mac.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKit;
 				PRODUCT_NAME = BlocksKit;
@@ -1544,7 +1546,7 @@
 				INFOPLIST_FILE = BlocksKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "BlocksKit/Module-Mac.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKit;
 				PRODUCT_NAME = BlocksKit;
