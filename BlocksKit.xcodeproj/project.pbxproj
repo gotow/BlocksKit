@@ -1090,7 +1090,6 @@
 					};
 					DB9B96361B3A52E500940D20 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7HK42V8R9D;
 						ProvisioningStyle = Manual;
 					};
 					DB9B963F1B3A52E500940D20 = {
@@ -1109,6 +1108,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1411,6 +1411,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				ENABLE_TESTABILITY = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "--digest-algorithm=sha1,sha256";
 				SDKROOT = macosx;
@@ -1428,6 +1429,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CODE_SIGN_FLAGS = "--digest-algorithm=sha1,sha256";
 				SDKROOT = macosx;
 			};
@@ -1510,10 +1512,8 @@
 			baseConfigurationReference = DB4CA4001B3A624B004B70F8 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7HK42V8R9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1521,7 +1521,6 @@
 				INFOPLIST_FILE = BlocksKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "BlocksKit/Module-Mac.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKit;
 				PRODUCT_NAME = BlocksKit;
@@ -1535,10 +1534,8 @@
 			baseConfigurationReference = DB4CA4001B3A624B004B70F8 /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7HK42V8R9D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1546,7 +1543,6 @@
 				INFOPLIST_FILE = BlocksKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "BlocksKit/Module-Mac.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKit;
 				PRODUCT_NAME = BlocksKit;
@@ -1562,7 +1558,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKitTests;
 				PRODUCT_NAME = BlocksKitTests;
 				SDKROOT = macosx;
@@ -1576,7 +1571,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = us.pandamonia.BlocksKitTests;
 				PRODUCT_NAME = BlocksKitTests;
 				SDKROOT = macosx;
@@ -1619,7 +1613,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Tests/Mac Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				LOCALIZATION_EXPORT_SUPPORTED = NO;
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mralexgray.BlocksKit-Mac-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1633,7 +1628,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Tests/Mac Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				LOCALIZATION_EXPORT_SUPPORTED = NO;
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mralexgray.BlocksKit-Mac-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
