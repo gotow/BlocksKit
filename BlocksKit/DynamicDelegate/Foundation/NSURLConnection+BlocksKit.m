@@ -353,7 +353,8 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 
 - (instancetype)bk_initWithRequest:(NSURLRequest *)request
 {
-	return (self = [self bk_initWithRequest:request completionHandler:nil]);
+    self = [self bk_initWithRequest:request completionHandler:nil];
+    return self;
 }
 
 - (instancetype)bk_initWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLConnection *, NSURLResponse *, NSData *))block
@@ -364,7 +365,8 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 	A2DynamicDelegate *dd = [self bk_dynamicDelegateForProtocol:delegateProtocol];
 	if (block)
 		dd.handlers[kSuccessBlockKey] = [block copy];
-	return (self = [self initWithRequest:request delegate:dd startImmediately:NO]);
+    self = [self initWithRequest:request delegate:dd startImmediately:NO];
+    return self;
 }
 
 - (void)bk_startWithCompletionBlock:(void (^)(NSURLConnection *, NSURLResponse *, NSData *))block

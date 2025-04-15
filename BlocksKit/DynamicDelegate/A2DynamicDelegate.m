@@ -25,8 +25,8 @@ static NSString *selectorDescribe(const void *item1)
 static inline BOOL protocol_declaredSelector(Protocol *protocol, SEL selector)
 {
     for (int i = 0; i < 4; i++) {
-        BOOL required = 1 & (i);
-        BOOL instance = 1 & (i >> 1);
+        BOOL required = (BOOL)(1 & (i));
+        BOOL instance = (BOOL)(1 & (i >> 1));
 
         struct objc_method_description description = protocol_getMethodDescription(protocol, selector, required, instance);
         if (description.name) {
@@ -295,7 +295,7 @@ static inline BOOL protocol_declaredSelector(Protocol *protocol, SEL selector)
 - (id)blockImplementationForClassMethod:(SEL)selector
 {
 	[self doesNotRecognizeSelector:_cmd];
-	return nil;
+	return self;
 }
 
 - (void)implementClassMethod:(SEL)selector withBlock:(id)block

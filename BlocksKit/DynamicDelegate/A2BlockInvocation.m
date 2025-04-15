@@ -169,7 +169,8 @@ NS_INLINE BOOL typesCompatible(const char *a, const char *b) {
 	NSMethodSignature *blockSignature = [[self class] typeSignatureForBlock:block];
 	NSMethodSignature *methodSignature = [[self class] methodSignatureForBlockSignature:blockSignature];
 	NSAssert(methodSignature, @"Incompatible block: %@", block);
-	return (self = [self initWithBlock:block methodSignature:methodSignature blockSignature:blockSignature]);
+    self = [self initWithBlock:block methodSignature:methodSignature blockSignature:blockSignature];
+    return self;
 }
 
 - (instancetype)initWithBlock:(id)block methodSignature:(NSMethodSignature *)methodSignature
@@ -179,7 +180,8 @@ NS_INLINE BOOL typesCompatible(const char *a, const char *b) {
 	if (![[self class] isSignature:methodSignature compatibleWithSignature:blockSignature]) {
 		@throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Attempted to create block invocation with incompatible signatures" userInfo:@{A2IncompatibleMethodSignatureKey: methodSignature}];
 	}
-	return (self = [self initWithBlock:block methodSignature:methodSignature blockSignature:blockSignature]);
+    self = [self initWithBlock:block methodSignature:methodSignature blockSignature:blockSignature];
+	return self;
 }
 
 - (BOOL)invokeWithInvocation:(NSInvocation *)outerInv returnValue:(out NSValue **)outReturnValue setOnInvocation:(BOOL)setOnInvocation
